@@ -9,9 +9,9 @@ const GetApi = () => {
         .then(data => setData(data.data.tools))
     },[])
     return (
-        <div>
+        <div className='grid grid-cols-3 gap-4'>
             {
-                data.map((singleData)=> <SingleData data={singleData}></SingleData>)
+                data.map((singleData)=> <SingleData data={singleData} key={singleData.id}></SingleData>)
 
             }
             
