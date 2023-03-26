@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import SingleData from '../SingleData/SingleData';
 
 const GetApi = () => {
     const [data, setData]=useState([]);
@@ -10,7 +11,7 @@ const GetApi = () => {
     return (
         <div>
             {
-                data.map(singleData => console.log(singleData))
+                data.map((singleData)=> <SingleData data={singleData}></SingleData>)
 
             }
             
